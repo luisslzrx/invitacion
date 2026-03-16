@@ -130,7 +130,7 @@ top:0px;
 left:0px;
 right:0px;
 bottom:0px;
-border:50px solid #f0b600;
+border:50px solid #F7C447;
 border-radius:18px;
 pointer-events:none;
 }
@@ -144,22 +144,22 @@ width:180px;
 pointer-events:none;
 }
 
-.planta-top-left{
+.planta4{
 top:0px;
 left:0px;
 }
 
-.planta-top-right{
+.planta2{
 top:0px;
 right:0px;
 }
 
-.planta-bottom-left{
+.planta3{
 bottom:0px;
 left:0px;
 }
 
-.planta-bottom-right{
+.planta1{
 bottom:0px;
 right:0px;
 }
@@ -267,12 +267,9 @@ overflow:hidden;
 .rsvp-section::after{
 
 content:"";
-
 position:absolute;
 inset:0;
-
 background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-
 pointer-events:none;
 
 }
@@ -287,13 +284,10 @@ align-items:center;
 gap:5px;
 }
 
-.rana{
-width:90px;
-}
-
 .rsvp-header h2{
+margin-top: 30px;
 color:#fff;
-font-size:40px;
+font-size:38px;
 font-weight:900;
 line-height:1.1;
 }
@@ -372,6 +366,25 @@ font-size:22px;
 font-weight:800;
 }
 
+
+.planta-top-left{
+position:absolute;
+top:0;
+left:0;
+width:180px;
+pointer-events:none;
+transform: rotate(180deg) scaleX(-1);
+}
+
+.planta-top-right{
+position:absolute;
+top:0;
+right:0;
+width:180px;
+pointer-events:none;
+transform:scaleX(-1) rotate(180deg);
+}
+
 /* ---------------- SECCIÓN 3 ---------------- */
 
 .save-date{
@@ -409,33 +422,71 @@ text-shadow:2px 2px 0 #ffd84a;
 margin-top:30px;
 }
 
-.dia{
-color:#ffd84a;
-font-size:34px;
+/* MES */
+
+.mes{
+color:#FFF;
 font-weight:900;
+font-size:20px;
+letter-spacing:2px;
 margin-bottom:10px;
-
 }
 
-.fecha{
-color:white;
-font-size:28px;
+/* FILA CENTRAL */
+
+.fecha-row{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:30px;
+}
+
+/* líneas */
+
+.line{
+width:90px;
+height:3px;
+background:#FFF;
+display:block;
+}
+
+/* SAT */
+
+.dia{
+font-size:42px;
 font-weight:900;
-margin-bottom:8px;
 }
+
+/* numero */
+
+.numero{
+font-size:48px;
+font-weight:900;
+}
+
+/* hora */
 
 .hora{
-color:white;
-font-size:26px;
-margin-bottom:12px;
+font-size:42px;
 font-weight:900;
 }
+
+/* año */
+
+.year{
+font-size:20px;
+font-weight:900;
+margin-top:10px;
+}
+
+/* lugar */
 
 .lugar{
 
 color:#ffd84a;
 font-family:'Caveat',cursive;
 font-size:26px;
+margin-top:10px;
 }
 
 
@@ -497,7 +548,7 @@ text-decoration:none;
 
 
 
-/* ---------------- DRESSCODE SECTION ---------------- */
+/* ---------------- SECCION 4 ---------------- */
 
 .dresscode-section{
 
