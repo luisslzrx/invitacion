@@ -110,7 +110,7 @@ border-radius:40px;
 cursor:pointer;
 
 margin-top:30px;
-margin-bottom:60px;
+margin-bottom:80px;
 
 box-shadow:0 6px 0 #d62828;
 transition:all .15s ease;
@@ -126,11 +126,11 @@ box-shadow:0 3px 0 #d62828;
 
 .marco{
 position:absolute;
-top:40px;
-left:40px;
-right:40px;
-bottom:40px;
-border:6px solid #f0b600;
+top:0px;
+left:0px;
+right:0px;
+bottom:0px;
+border:50px solid #f0b600;
 border-radius:18px;
 pointer-events:none;
 }
@@ -176,7 +176,7 @@ pointer-events:none;
 
 .rana{
 top:15%;
-left:2%;
+left:0%;
 width:70px;
 }
 
@@ -209,7 +209,7 @@ width:110px;
 
 .tambor{
 bottom:20%;
-left:6%;
+left:2%;
 width:90px;
 }
 
