@@ -14,12 +14,21 @@
 </head>
 
 <body>
- 
-<!-- <div id="video-intro">
-  <video autoplay muted loop playsinline>
+
+<!-- SECCIÓN DE INICIO -->
+<section id="pantalla-inicio">
+  <div class="inicio-container">
+    <button type="button" class="btn-revelar" onclick="revelarInvitacion()">
+      PRESIONA AQUÍ PARA REVELAR
+    </button>
+  </div>
+</section>
+
+<div id="video-intro">
+  <video autoplay muted playsinline>
     <source src="files/video/bad-bunny.mp4" type="video/mp4">
   </video>
-</div> -->
+</div>
 
 
 
@@ -130,7 +139,7 @@
 
     <p class="year">2026</p>
 
-    <p class="lugar">@Mi Casita</p>
+    <p class="lugar">Ubicación: En la casita</p>
   </div>
 
   <div class="imagen-casa">
@@ -138,15 +147,9 @@
     <img class="flor" src="files/images/flor.png" alt="flor decorativa">
   </div>
 
-  <div class="botones">
-    <a href="#" class="btn-directions">
-      DiReCTioNS →
-    </a>
-    <a href="#" class="btn-rsvp">
-      RSVP
-    </a>
-  </div>
-</section>
+  <p class="ubicacion-despues">La ubicación exacta se revelará más cerca del evento</p>
+
+  </section>
 
 
 
@@ -180,10 +183,10 @@
 
 
   <div class="dresscode-botones">
-    <a href="#" class="btn-mujer">
+    <a href="https://pin.it/5nQhn8V01" target="_blank" class="btn-mujer">
       DReSSCoDe MuJeR
     </a>
-    <a href="#" class="btn-hombre">
+    <a href="https://pin.it/65km8K4BI" target="_blank" class="btn-hombre">
       DReSSCoDe HoMBRe
     </a>
   </div>
@@ -199,9 +202,10 @@
   <div class="frase-container">
     <p class="frase">
       MiEnTRaS uNo EsTe ViVo <br>
-      uNo DeBe AMaR <br>
-      Lo MáS QuE PuEdA
+      uNo DeBe <span class="tachado">AMaR</span> <br>
+      <span class="correccion">festejar en otates</span>
     </p>
+    <p class="frase-final">Lo MáS QuE PuEdA</p>
     <!-- contador -->
     <div class="contador">
       <div class="tiempo">
@@ -230,9 +234,9 @@
 
 
 <!-- MUSICA DE FONDO -->
-<!-- <audio id="bg-music">
+<audio id="bg-music">
   <source src="files/audio/song.mp3" type="audio/mpeg">
-</audio> -->
+</audio>
 
 
 <script src="script.js"></script>
