@@ -105,16 +105,23 @@ font-family: 'Montserrat', sans-serif;
 position: relative;
 overflow: hidden;
 
-/* Animación de entrada - solo cuando esté activa */
-opacity: 0;
-transform: translateY(50px);
-transition: opacity 1s ease, transform 1s ease;
+/* Ocultar completamente hasta que se revele */
+display: none;
 }
 
 /* Activar animaciones cuando el video termine */
 body.animaciones-activas .aplauso {
+display: flex;
 opacity: 1;
 transform: translateY(0);
+}
+
+/* Mostrar otras secciones cuando el video termine */
+body.animaciones-activas .rsvp-section,
+body.animaciones-activas .save-date,
+body.animaciones-activas .dresscode-section,
+body.animaciones-activas .banner-frase {
+display: flex;
 }
 
 /* Animación de entrada */
@@ -483,6 +490,9 @@ padding:50px 20px;
 
 position:relative;
 overflow:hidden;
+
+/* Ocultar hasta que se revele */
+display: none;
 }
 
 
@@ -617,6 +627,9 @@ text-align:center;
 padding:60px 20px;
 font-family:'Montserrat',sans-serif;
 overflow: hidden;
+
+/* Ocultar hasta que se revele */
+display: none;
 }
 
 /* encabezado */
@@ -766,6 +779,9 @@ justify-content:space-between;
 text-align:center;
 padding:60px 20px;
 font-family:'Montserrat',sans-serif;
+
+/* Ocultar hasta que se revele */
+display: none;
 }
 
 
@@ -925,6 +941,9 @@ justify-content:center;
 align-items:center;
 text-align:center;
 font-family:'Montserrat', sans-serif;
+
+/* Ocultar hasta que se revele */
+display: none;
 }
 
 /* contenedor */

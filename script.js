@@ -5,35 +5,33 @@ function revelarInvitacion() {
     pantallaInicio.style.opacity = '0';
     pantallaInicio.style.visibility = 'hidden';
     
+    // Mostrar y reproducir video a pantalla completa
+    const videoIntro = document.getElementById("video-intro");
+    videoIntro.style.display = 'block';
+    
+    const video = document.querySelector('#video-intro video');
+    video.play().catch(e => console.log("Error al reproducir video"));
+    
     // Reproducir música de fondo
     const music = document.getElementById("bg-music");
     music.volume = 0.75;
     music.play().catch(e => console.log("Autoplay bloqueado, esperando interacción"));
     
-    // Mostrar y reproducir video
-    setTimeout(() => {
-        const videoIntro = document.getElementById("video-intro");
-        videoIntro.style.display = 'block';
+    // Cuando el video termine, ocultarlo y mostrar invitación
+    video.addEventListener('ended', function() {
+        videoIntro.classList.add("ocultar");
         
-        const video = document.querySelector('#video-intro video');
-        video.play().catch(e => console.log("Error al reproducir video"));
-        
-        // Cuando el video termine, ocultarlo y mostrar animaciones
-        video.addEventListener('ended', function() {
-            videoIntro.classList.add("ocultar");
+        // Mostrar todas las secciones de la invitación
+        setTimeout(() => {
+            // Agregar clase para iniciar animaciones
+            document.body.classList.add('animaciones-activas');
             
-            // Pequeño delay para que la transición sea suave
-            setTimeout(() => {
-                // Agregar clase para iniciar animaciones
-                document.body.classList.add('animaciones-activas');
-                
-                // Ejecutar animaciones al cargar si ya son visibles
-                handleScrollAnimation();
-                handleSection3Animation();
-                handleSection4Animation();
-            }, 500);
-        });
-    }, 300); // Pequeña transición
+            // Ejecutar animaciones al cargar si ya son visibles
+            handleScrollAnimation();
+            handleSection3Animation();
+            handleSection4Animation();
+        }, 500);
+    });
 }
 
 // música de fondo (ya se maneja en la función revelarInvitacion)
